@@ -21,7 +21,7 @@ namespace AspNetCoreWebApplicationTest.Controllers
             HomeController controller = new HomeController();
             ViewResult result = (ViewResult)controller.Error();
             Assert.Single(result.ViewData);
-            Assert.Equal("We've encountered an error :(", result.ViewData["Message"]);
+            Assert.Equal("We've ntered an error :(", result.ViewData["Message"]);
         }
 
         [Fact]
@@ -29,7 +29,7 @@ namespace AspNetCoreWebApplicationTest.Controllers
         {
             HelloController controller = new HelloController();
             var response = controller.Get().Value as Response;
-            Assert.Equal("Hello World1!!!", response.output);
+            Assert.Equal("Hello World!!!", response.output);
         }
     }
 }
